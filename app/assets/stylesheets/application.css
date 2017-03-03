@@ -25,12 +25,12 @@ body{
 }
 
 header{
-    background-color: #7195cb;
+    background-color: #49331D;
     height : 65px;
     width: 100%;
     top: 0;
     z-index: 10;
-    position:absolute;
+    position:fixed;
 }
 
 .container {
