@@ -1,3 +1,53 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-wrapper {
+    padding: 35px 15px 15px 15px;
+    vertical-align: top;
+}
+
+.book-image {
+    margin-left: 10px;
+    padding: 15px;
+    border: 1px solid #444;
+    width: 20%;
+}
+.contents {
+    margin-left: 20px;
+    text-align: left;
+    width: 50%;
+}
+.title {
+    font-size: 32px;
+    border-bottom: 1px solid #444;
+}
+.content-details {
+    padding-left: 10px;
+    text-align: left;
+}
+.content-details li {
+    font-size: 24px;
+}
+
+.flex{
+    display: flex;
+}
+.btn {
+    border: 1px solid #444;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.push {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.book-image2 {
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid #444;
+    width: 20%;
+}

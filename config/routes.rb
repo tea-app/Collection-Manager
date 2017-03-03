@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'books/top'
+  
+  get 'books/detail'
 
   get 'user/show'
 
