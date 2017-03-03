@@ -6,9 +6,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
-    <%= yield %>
+      <header>
+          <div class="container">
+              <div class="header_left">
+                    <div class="header_logo">
+                        <h1>蔵書管理フレンズ</h1>
+                    </div>
+              </div>
+              <div class="header_right">
+                  <div class="item"><!--link to--><p>検索</p></div>
+                  <div class="item"><!--link to--><p>マイページ</p></div>
+              </div>
+          </div>
+      </header>
+      <div class="container">
+      
+        <%= yield %>
+      
+      </div>
   </body>
 </html>
