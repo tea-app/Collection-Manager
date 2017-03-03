@@ -20,17 +20,17 @@
 
 body{
     margin:0px;
-    background-color: #EAEAE0;
+    background-color: #E3BA78;
     font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
 }
 
 header{
-    background-color: #00336D;
+    background-color: #7195cb;
     height : 65px;
     width: 100%;
     top: 0;
     z-index: 10;
-    position: fixed;
+    position:absolute;
 }
 
 .container {
@@ -40,7 +40,7 @@ header{
     margin: 0 auto;
 }
 
-.container h1{
+.header_logo h1{
     font-size: 20px;
 }
 
