@@ -13,8 +13,63 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    box-sizing: :border-box;
+}
+
+body{
+    margin:0px;
+    background-color: #EAEAE0;
+    font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
+header{
+    background-color: #00336D;
+    height : 65px;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    position: fixed;
+}
+
 .container {
-    width: 1170px;
-    padding: 0px 15px;
-    margin: 0px auto;
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container h1{
+    font-size: 20px;
+}
+
+.header_left{
+    float:left;
+}
+
+.header_right{
+    float:right;
+    margin-right: 15px;
+}
+
+.item {
+    height:65px;
+    float:left;
+    color:#fff;
+    transition: all 0.5s;
+    display: block;
+}
+
+.item p{
+    padding:0px 25px;    
+}
+
+.item:hover{
+    background-color: #4D9BE8;
+}
+
+.header_logo{
+    color:#fff;
+    margin-top: 20px;
 }
