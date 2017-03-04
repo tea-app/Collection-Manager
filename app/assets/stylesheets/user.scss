@@ -1,3 +1,74 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Place all the styles related to the user controller here.*/
+/* They will automatically be included in application.css.*/
+/* You can use Sass (SCSS) here: http://sass-lang.com */
+
+a {
+  text-decoration: none;
+}
+
+.user_profile{
+    width:29%;
+    display:block;
+    float: left;
+    text-align: center;
+    
+    height : 1500px;
+    /*background-color:#59432D;*/
+}
+
+.user_profile a{
+    color:#fff;
+
+}
+
+.user_photo img {
+    width: 80%;
+    text-align: center;
+}
+
+.user_show_contents p{
+    color:#fff;
+}
+
+.book_shelf{
+    width: 70%;
+    display: block;
+    float:right;
+    
+    height: 1500px;
+    background-color: #444;   /*仮置き*/
+}
+
+.user_show_contents{
+    padding-top: 100px;
+    color:#444;  /*仮置き*/
+    color:#fff;
+    text-align: center;
+}
+
+.btn-wrapper {
+    text-align: center;
+}
+
+.btn-wrapper p{
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 8px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    width: 80%;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.profile_update{
+    background-color: #000;
+}
