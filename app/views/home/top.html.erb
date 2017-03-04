@@ -1,2 +1,9 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/home/top.html.erb</p>
+
+    <div class = "top-wrapper">
+      <div class="inner-background">
+        <h1>蔵書管理.appへようこそ!</h1>
+        <h2>蔵書管理.appでは買った本読んだ本を登録し、管理することができます。</h2>
+        <h2>蔵書管理.appを利用して蔵書を管理しましょう！</h2>
+        <%= link_to "さっそく検索する！", {:controller => "books", :action => "top"}, :class => 'go-btn btn' %>
+      </div>
+    </div>

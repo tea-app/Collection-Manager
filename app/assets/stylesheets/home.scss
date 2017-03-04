@@ -1,3 +1,60 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body {
+  height:100%;
+  font-family: arial;
+}
+
+.top-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: image-url("topimage.jpg");
+  background-size: cover;
+}
+
+.inner-background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.top-wrapper h1 {
+  text-align: center;
+  color: white;
+  padding-top: 165px;
+  padding-bottom: 30px;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.top-wrapper h2 {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.go-btn {
+  display: block;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 150px;
+  background-color: rgb(97, 73, 52);
+  color: white;
+}
+
+.btn {
+  padding: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn:active {
+  background-color: rgba(98, 73, 52, 0.7);
+}
