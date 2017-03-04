@@ -25,6 +25,7 @@ a {
 body{
     margin:0px;
     background-color: #555;
+    min-width: 800px;
     font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
 }
 
@@ -57,7 +58,7 @@ header{
     margin-right: 15px;
 }
 
-.item {
+.header_item {
     height:65px;
     float:left;
     color:#fff;
@@ -65,11 +66,11 @@ header{
     display: block;
 }
 
-.item p{
+.header_item p{
     padding:0px 25px;
 }
 
-.item:hover{
+.header_item:hover{
     background-color: #39230D;
 }
 
