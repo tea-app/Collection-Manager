@@ -1,3 +1,93 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-search-wrapper {
+    padding: 100px 15px 15px 15px;
+    text-align: center;
+}
+.top-search-wrapper h1 {
+    font-size: 32px;
+}
+.search-form {
+    height: 300px;
+    background-color: crimson;
+}
+.title-word, .title-field, .genre-word, .genre-field, .ibsn-word, .ibsn-field {
+    display: inline-block;
+}
+.title-word, .genre-word, .ibsn-word {
+    font-size: 20px;
+}
+.title-field, .ibsn-field {
+    padding: 10px 5px;
+    font-size: 20px;
+}
+.genre-field {
+    font-size: 60px;
+    padding: 10px;
+}
+.search-btn {
+    font-size: 20px;
+}
+.top-list-wrapper {
+    padding-bottom: 50px;
+}
+.details-top-wrapper {
+    padding: 100px 15px 15px 15px;
+    vertical-align: top;
+}
+
+.book-image {
+    margin-left: 10px;
+    padding: 15px;
+    border: 1px solid #444;
+    width: 20%;
+}
+.contents {
+    margin-left: 20px;
+    text-align: left;
+    width: 50%;
+}
+.title {
+    font-size: 32px;
+    border-bottom: 1px solid #444;
+}
+.content-details {
+    padding-left: 10px;
+    text-align: left;
+}
+.content-details li {
+    font-size: 24px;
+}
+
+.flex{
+    display: flex;
+}
+.btn {
+    border: 1px solid #444;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.details-bottom-wrapper {
+    padding-bottom: 50px;
+}
+.push {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.other-image {
+    display: inline-block;
+    width: 20%;
+    padding: 25px 15px 0px 15px;
+    border: 1px solid #444;
+    text-align: center;
+}
+.other-image p {
+    font-size: 14px;
+}
+.book-image2 {
+    width: 80%;
+}
