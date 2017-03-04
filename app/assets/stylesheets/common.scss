@@ -1,0 +1,47 @@
+/*共通部分のCSS(ログイン画面、新規登録画面を含める)*/
+
+.form-control {
+    display: block;
+    width: 90%;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    margin: 10px 0px 10px 5%;
+}
+
+.primary-btn {
+    margin-left: 5%;
+    padding: 10px 30px;
+    background-color: #239b76;
+}
+.primary-btn:hover {
+    background-color: #28b086;
+}
+.title {
+    margin-top: 70px;
+}
+.form-title {
+    margin-left: 5%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.btn {
+    padding: 8px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+.chk-box {
+    margin-left: 5%;
+}
+.chk-title {
+    font-size: 20px;
+}

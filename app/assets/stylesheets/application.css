@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+/*@import "common";*/
 
 * {
     box-sizing: border-box;
@@ -68,10 +69,6 @@ header{
     color:#fff;
     transition: all 0.5s;
     display: block;
-}
-
-.item p{
-    padding:0px 25px;
 }
 
 .item:hover{
