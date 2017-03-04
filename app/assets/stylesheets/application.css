@@ -69,10 +69,6 @@ header{
     display: block;
 }
 
-.item p{
-    padding:0px 25px;
-}
-
 .item:hover{
     background-color: #39230D;
 }
