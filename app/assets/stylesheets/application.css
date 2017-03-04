@@ -58,19 +58,23 @@ header{
     margin-right: 15px;
 }
 
-.header_item {
+.item {
     height:65px;
+    line-height: 65px;
+    margin-right: 10px;
+    width: 100px;
+    text-align: center;
     float:left;
     color:#fff;
     transition: all 0.5s;
     display: block;
 }
 
-.header_item p{
+.item p{
     padding:0px 25px;
 }
 
-.header_item:hover{
+.item:hover{
     background-color: #39230D;
 }
 
