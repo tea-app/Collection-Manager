@@ -81,13 +81,21 @@
 .other-image {
     display: inline-block;
     width: 20%;
-    padding: 25px 15px 0px 15px;
+    padding: 15px 15px 0px 15px;
+    margin-left: 10px;
     border: 1px solid #444;
     text-align: center;
 }
-.other-image p {
+.book-title {
+    
     font-size: 14px;
+    transition: all 0.5s;
+}
+.book-title:hover {
+    color: blue;
+    border-bottom: 1px solid blue;
+    transition: all 0.5s;
 }
 .book-image2 {
-    width: 80%;
+    width: 100%;
 }
