@@ -1,92 +1,98 @@
 <div class="container">
-    <div class="wrapper_search_result">
-        <div class="top-list-wrapper">
-            <% for i in 0..10 do %>
-            <div class="other-image">
-                <%= image_tag @data[i][:imageUrl], class: 'book-image2' %>
-                <%= link_to @data[i][:title], books_detail_path(@data[i]), class:'book-title' %>
-            </div>
-            <% end %>
-            <!--
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>
-            <div class="other-image">
-                <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
-                <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
-            </div>-->
-        </div>
-        <div class="wrapper-search-btn">
-            <%= link_to '検索', books_top_path , class:'btn search-btn' %>
-        </div>
+  <div class="wrapper_search_result">
+    <% if @error != "" %>
+    <p class = "error-message"><p><%= @error %></p></p>
+    <%= link_to '検索', books_top_path , class:'btn error-search-btn' %>
+    <% else %>
+    <div class="top-list-wrapper">
+      <%= for i in 0..(@hits - 1) do %>
+
+      <div class="other-image">
+        <%= image_tag @data[i][:imageUrl], class: 'book-image2' %>
+        <%= link_to @data[i][:title], books_detail_path(@data[i]), class:'book-title' %>
+      </div>
+      <% end %>
+      <!--
+      <div class="other-image">
+      <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+      <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
     </div>
+    <div class="other-image">
+    <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+    <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+  </div>
+  <div class="other-image">
+  <%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+  <%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>
+<div class="other-image">
+<%= image_tag '9784063409543.jpg', class: 'book-image2' %>
+<%= link_to '逃げるは恥だが役に立つ', books_detail_path, class:'book-title' %>
+</div>-->
+</div>
+<div class="wrapper-search-btn">
+  <%= link_to '検索画面へ', books_top_path , class:'btn search-btn' %>
+</div>
+<% end %>
+</div>
 </div>
