@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   
   get 'books/detail' => 'books#detail'
   
+  get 'books/db_have' => 'books#db_have'
+  
+  get 'books/db_read' => 'books#db_read'
+  
   #  post 'books/api' => 'books#api'
   
   post 'books/search_result' => 'books#search_result'

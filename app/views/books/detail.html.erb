@@ -1,21 +1,17 @@
 <div class="container">
     <div class="details-top-wrapper flex">
-        <%= image_tag '9784063409543.jpg', class: 'book-image' %>
+        <%= image_tag @imageUrl, class: 'book-image' %>
     <!--    <img src="9784063409543.jpg" class="book-image">-->
         <div class="contents">
-            <p class="title">逃げるは恥だが役に立つ</p>
+            <p class="title"><%= @title%></p>
             <div class="content-details">
                 <list>
-                    <li>著者：ああああああ</li>
-                    <li>発行年月日：2016年7月7日</li>
-                    <li>出版社：新潮社</li>
+                    <li>著者：<%= @author%></li>
+                    <!--<li>発行年月日：</li>
+                    <li>出版社：新潮社</li>-->
                 </list>
-                <span class="books_btn have-btn">
-                    持っている！
-                </span>
-                <span class="books_btn read-btn">
-                    読んだ！
-                </span>
+                <%= link_to '持っている！', books_db_have_path(@isbn), class: @word %>
+                <%= link_to '読んだ！', books_db_read_path(@isbn), class: @word %>
             </div>
         </div>
     </div>
