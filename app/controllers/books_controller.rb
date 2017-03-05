@@ -44,14 +44,20 @@ class BooksController < ApplicationController
     else
       items = json["Items"]
       # resultを使ってなんやかんや処理をする
-      for i in 0..0 do
-        @title = items.dig(i, "Item", "title")
-        @subTitle = items.dig(i, "Item", "subTitle")
-        @author = items.dig(i, "Item", "author")
-        @size = items.dig(i, "Item", "size")
-        @isbn = items.dig(i, "Item", "isbn")
-        @itemUrl = items.dig(i, "Item", "itemUrl")
-        @ImageUrl = items.dig(i, "Item", "largeImageUrl")
+      @data = []
+      for i in 0..10 do
+
+
+        input = {
+          title: items.dig(i,"Item", "title"),
+          subTitle: items.dig(i, "Item", "subTitle"),
+          author: items.dig(i, "Item", "author"),
+          size: items.dig(i, "Item", "size"),
+          isbn: items.dig(i, "Item", "isbn"),
+          itemUrl: items.dig(i, "Item", "itemUrl"),
+          imageUrl: items.dig(i, "Item", "largeImageUrl"),
+        }
+        @data[i] = input
       end
     end
   end
