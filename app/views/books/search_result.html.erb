@@ -1,7 +1,7 @@
 <div class="container">
     <div class="wrapper_search_result">
         <div class="top-list-wrapper">
-            <%= for i in 0..10 do %>
+            <% for i in 0..10 do %>
             <div class="other-image">
                 <%= image_tag @data[i][:imageUrl], class: 'book-image2' %>
                 <%= link_to @data[i][:title], books_detail_path(@data[i]), class:'book-title' %>

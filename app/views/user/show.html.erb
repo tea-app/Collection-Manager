@@ -20,11 +20,18 @@
             <p class="books_status_info">持っている本</p>
             <div class="book_shelf">
                 <div class="books_status">
-                    <div class="books_line">
-                        <div class="books">
-                            <%= image_tag'9784063409543.jpg', class: 'user_photo' %>
-                            <p class="book_title"><%= title %></p>
-                        </div>
+                    <!--<div class="books_line">-->
+                    <% if @books_have.size == 0 %>
+                    <p>持っている本はありません</p>
+                    <% else %>
+                    <% for i in 0..(@books_have.size - 1) do %>
+                    <div class="books">
+                        <%= image_tag @books_have[i][:imageUrl], class: 'user_photo' %>
+                        <%= link_to @books_have[i][:title], books_detail_path(@books_have[i]), class:"book_title" %>
+                    </div>
+                    <% end%>
+                    <% end%>
+                        <!--
                         <div class="books">
                             <img src="http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0027/9784088810027.jpg?_ex=200x200">
                             <p class="book_title"><%= title %></p>
@@ -55,13 +62,24 @@
                             <%= image_tag'9784063409543.jpg', class: 'user_photo' %>
                             <p class="book_title"><%= title %></p> 
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <p class="books_status_info">読んだ本</p>
             <div class="book_shelf">
             <!-- 読んだ本 -->
                 <div class="books_status">
+                    <% if @books_read.size == 0 %>
+                    <p>読んだ本はありません</p>
+                    <% else %>
+                    <% for i in 0..(@books_read.size - 1) do %>
+                    <div class="books">
+                        <%= image_tag @books_read[i][:imageUrl], class: 'user_photo' %>
+                        <%= link_to @books_read[i][:title], books_detail_path(@books_read[i]), class:"book_title" %>
+                    </div>
+                    <% end%>
+                    <% end%>
+                    <!--
                     <div class="books_line">
                         <div class="books">
                             <%= image_tag'9784063409543.jpg', class: 'user_photo' %>
@@ -98,6 +116,7 @@
                             <p class="book_title"><%= title %></p> 
                         </div>
                     </div>
+-->
                 </div>
             </div>
             <!--
