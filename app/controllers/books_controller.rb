@@ -1,5 +1,4 @@
 class BooksController < ApplicationController
-  include BooksHelper
   before_action :authenticate_user!
   def top
   end
@@ -8,16 +7,22 @@ class BooksController < ApplicationController
       @imageUrl = params[:imageUrl]
       @author = params[:author]
       @isbn = params[:isbn]
-      @library = Library.find_by(isbn:params[:isbn], user_id:current_user.id)
-      if @library.nil?
-          @word = "books_btn have-btn1"
+      @library1 = Library.find_by(isbn:params[:isbn], mode:0, user_id:current_user.id)
+      @library2 = Library.find_by(isbn:params[:isbn], mode:1, user_id:current_user.id)
+      if @library1.nil?
+          @word1 = "books_btn have-btn1"
       else
-          @word = "books_btn have-btn2"
+          @word1 = "books_btn have-btn2"
+      end
+      if @library2.nil?
+          @word2 = "books_btn read-btn1"
+      else
+          @word2 = "books_btn read-btn2"
       end
       #api(@isbn)
   end
   def db_have
-      @judge= Library.find_by(isbn:params[:isbn], user_id:current_user.id)
+      @judge= Library.find_by(isbn:params[:format], mode:0, user_id:current_user.id)
       if @judge.nil?
           @library = Library.new
           @library.isbn = params[:format]
@@ -30,6 +35,17 @@ class BooksController < ApplicationController
       redirect_to current_user
   end
   def db_read
+      @judge= Library.find_by(isbn:params[:format], mode:1, user_id:current_user.id)
+      if @judge.nil?
+          @library = Library.new
+          @library.isbn = params[:format]
+          @library.mode = 1
+          @library.user_id = current_user.id
+          @library.save
+          else
+          @judge.destroy
+      end
+      redirect_to current_user
   end
   def search_result
       @title = params[:title]
