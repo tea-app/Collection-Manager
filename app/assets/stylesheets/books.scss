@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.books-top-wrapper{
+    width:80%;
+
+}
+
 .top-search-wrapper {
     padding: 100px 15px 15px 15px;
     text-align: center;
@@ -11,7 +16,8 @@
 }
 .search-form {
     height: 300px;
-    background-color: crimson;
+    background-color:#333;
+    width:100%;
 }
 .title-word, .title-field, .genre-word, .genre-field, .ibsn-word, .ibsn-field {
     display: inline-block;
@@ -24,7 +30,7 @@
     font-size: 20px;
 }
 .genre-field {
-    font-size: 10px;
+    font-size: 20px;
     padding: 10px;
 }
 .search-btn {
@@ -32,6 +38,9 @@
 }
 .top-list-wrapper {
     padding-bottom: 50px;
+    overflow: scroll;
+    height:1000px;
+    background-color: #222;
 }
 .details-top-wrapper {
     padding: 100px 15px 15px 15px;
@@ -73,6 +82,7 @@
 }
 .details-bottom-wrapper {
     padding-bottom: 50px;
+
 }
 .push {
     font-size: 20px;
@@ -80,20 +90,25 @@
 }
 .other-image {
     display: inline-block;
-    width: 20%;
-    padding: 15px 15px 0px 15px;
-    margin-left: 10px;
+    width: 24%;
+    margin: 5px 0px 0px 5px;
     border: 1px solid #444;
     text-align: center;
+    background-color: #333;
+    opacity: 0.8;
 }
+
+.other-image:hover{
+    opacity: 1.0;
+}
+
 .book-title {
-    
+    color:#ddd;
     font-size: 14px;
     transition: all 0.5s;
 }
 .book-title:hover {
-    color: blue;
-    border-bottom: 1px solid blue;
+    color:#fff;
     transition: all 0.5s;
 }
 .book-image2 {
