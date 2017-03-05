@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get 'books/top' => 'books#top'
   
   get 'books/detail' => 'books#detail'
+  
+  #  post 'books/api' => 'books#api'
+  
+  post 'books/search_result' => 'books#search_result'
 
 #  get 'user/show' => 'user#show'
 
