@@ -1,5 +1,24 @@
 /*共通部分のCSS(ログイン画面、新規登録画面を含める)*/
+.header-fill {
+    padding-top: 70px;
+}
+.alert {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  line-height: 40px;
+  padding-left: 15px;
+  font-size: small;
+}
 
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+}
 .form-control {
     display: block;
     width: 90%;

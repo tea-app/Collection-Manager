@@ -1,17 +1,16 @@
 <%= form_for(@user) do |f| %>
-<!--
-  < if @user.errors.any? %>
+  <% if @user.errors.any? %>
     <div class="alert alert-danger">
-       <p><= @user.errors.count %>件のエラーがあります。</p>
+       <p><%= @user.errors.count %>件のエラーがあります。</p>
 
       <ul>
-      < @user.errors.full_messages.each do |msg| %>
-        <li><= msg %></li>
-      < end %>
+      <%= @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
       </ul>
     </div>
-  < end %>
--->
+  <% end %>
+
 <div class="container">
   <div class="user_edit">
     <h1 class="title">プロフィールを編集する</h1>
