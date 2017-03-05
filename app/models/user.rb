@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          
   validates :name, presence: true
-  
+
   def set_image(file)
       if !file.nil?
           file_name = file.original_filename
