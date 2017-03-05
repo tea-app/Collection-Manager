@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :user
+  
+  resources :user
+
   get 'books/top' => 'books#top'
   
   get 'books/detail' => 'books#detail'
 
-  get 'user/show' => 'user#show'
+#  get 'user/show' => 'user#show'
 
   root 'home#top'
 
