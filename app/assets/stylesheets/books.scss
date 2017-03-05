@@ -2,24 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.books-top-wrapper{
-    width:80%;
-}
-
 .top-search-wrapper {
-    padding: 35px 15px 15px 15px;
     text-align: center;
+    background-image: image-url("bookshell.jpg");
+    background-size: cover;
+    height:100%;
 }
 
 .top-search-wrapper h1 {
+    padding-top: 100px;
     font-size: 32px;
 }
 
 .search-form {
-    height: 300px;
-    background-color:#666;
-    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 320px;
+    background-color:#ad9158;
+    width: 600px;
 }
 
 .top-search-wrapper p,.top-search-wrapper h1 {
@@ -28,9 +28,12 @@
 
 .title-word, .title-field, .genre-word, .genre-field, .ibsn-word, .ibsn-field {
     display: inline-block;
+    width: 200px;
 }
 
 .title-word, .genre-word, .ibsn-word {
+  margin-left: 10px;
+    text-align: left;
     font-size: 20px;
 }
 
@@ -44,7 +47,22 @@
     padding: 10px;
 }
 
+.input-wrapper {
+  padding-top: 20px;
+    width: 100%;
+    height: 250px;
+    text-align: left;
+}
+
+.title-form, .genre-form , .ibsn-form{
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .search-btn {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 20px;
     text-align: center;
     background-color: #5D4037;
@@ -53,7 +71,7 @@
 }
 
 .search-btn:hover{
-    background-color: #4D3027 
+    background-color: #4D3027
 }
 
 .details-top-wrapper {
