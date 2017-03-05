@@ -90,17 +90,32 @@
     display: flex;
 }
 
-.btn {
+.books_btn {
     border: 1px solid #444;
     padding: 15px 20px;
     display: inline-block;
     margin-left: 20px;
     margin-top: 20px;
+    background-color: #666;
+    color:#fff;
+    border-radius: 10px;
+}
+
+.books_btn:hover{
+    opacity: 0.8;
 }
 
 .details-bottom-wrapper {
     padding-bottom: 50px;
+    background-color: #444;
+}
 
+.details-bottom-wrapper p{
+    color:#fff;
+}
+
+ .contents p ,.contents list{
+    color:#fff;
 }
 
 .push {
