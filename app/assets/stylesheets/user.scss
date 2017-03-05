@@ -32,13 +32,16 @@ a {
 }
 
 .book_shelf{
+    height: 1000px;
+    background-color: #444;   /*仮置き*/
+    overflow: scroll;
+    padding-right: 20px;
+}
+
+.wrapper_book_shelf{
     width: 70%;
     display: block;
     float:right;
-    overflow: scroll;
-    
-    height: 1000px;
-    background-color: #444;   /*仮置き*/
 }
 
 .user_show_contents{
@@ -46,6 +49,10 @@ a {
     color:#444;  /*仮置き*/
     color:#fff;
     text-align: center;
+}
+
+.book_status{
+    overflow: hidden;
 }
 
 .btn-wrapper {
@@ -100,7 +107,7 @@ a {
 }
 
 .books_line{
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .book_title{
