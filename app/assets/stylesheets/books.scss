@@ -45,13 +45,14 @@
 
 .search-btn {
     font-size: 20px;
+    text-align: center;
+    background-color: #5D4037;
+    border: #5D4037;
+    border-radius: 5px;
 }
 
-.top-list-wrapper {
-    padding-bottom: 50px;
-    overflow: scroll;
-    height:1000px;
-    background-color: #444;
+.search-btn:hover{
+    background-color: #4D3027 
 }
 
 .details-top-wrapper {
@@ -131,11 +132,11 @@
     border: 1px solid #444;
     text-align: center;
     background-color: #333;
-    opacity: 1.0;
+    opacity: 0.8;
 }
 
 .other-image:hover{
-    opacity: 0.8;
+    opacity: 1.0;
 }
 
 .book-title {
@@ -151,4 +152,26 @@
 
 .book-image2 {
     width: 100%;
+}
+
+
+/* search_result */
+.wrapper-search-btn{
+    padding:15px 0px 10px 0px;
+}
+
+.top-list-wrapper {
+    overflow: scroll;
+    background-color: #444;
+    margin: auto 0px;
+    padding-bottom: 10px;
+}
+
+.wrapper_search_result{
+    text-align: center;
+    padding-top:100px;
+}
+
+.wrapper_search_result p{
+    color:#fff;
 }
