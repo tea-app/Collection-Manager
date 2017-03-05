@@ -57,6 +57,7 @@ header{
 .header_right{
     float:right;
     margin-right: 15px;
+    display: block;
 }
 
 .item {
@@ -72,10 +73,75 @@ header{
 }
 
 .item:hover{
-    background-color: #39230D;
+    background-color: black;
 }
 
 .header_logo{
     color:#fff;
     margin-top: 20px;
+}
+
+#menu-icon {
+  text-align: center;
+  margin: 15px 10px;
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+.header-toggleMenu {
+  display: none;
+}
+
+@media all and (max-width: 1000px) {
+  .header-toggleMenu {
+    display: none;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .header_right {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .header-toggleMenu {
+    clear: both;
+    position: fixed;
+    display: inline-block;
+  }
+
+  .header-toggleMenu .item-search {
+    position: fixed;
+    right: -10px;
+    top: 65px;
+    background-color: #39230D;
+  display: none;
+  }
+
+  .header-toggleMenu .item-mypage {
+    position: fixed;
+    right: -10px;
+    top: 130px;
+    background-color: #39230D;
+    display: none;
+  }
+
+  .header-toggleMenu .item-logout {
+    position: fixed;
+    right: -10px;
+    top: 195px;
+    background-color: #39230D;
+    display: none;
+  }
+
+  .header-toggleMenu .item:hover {
+    background-color: black;
+  }
+
 }
