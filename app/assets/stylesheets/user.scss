@@ -34,12 +34,13 @@ a {
 
 .book_shelf{
     height: 500px;
-    background-color: #444;   /*仮置き*/
     overflow: scroll;
     padding-right: 20px;
+    padding-bottom: 10px;
 }
 
 .wrapper_book_shelf{
+    background-color: #444;   /*仮置き*/
     width: 70%;
     display: block;
     float:right;
@@ -120,6 +121,11 @@ a {
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.book_shelf_specer{
+    height:10px;
+    padding-top: 10px;
 }
 
 /*----edit.html---------------*/
