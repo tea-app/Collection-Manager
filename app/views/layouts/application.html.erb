@@ -18,26 +18,30 @@
                         <h1>蔵書管理フレンズ</h1>
                     </div>
               </div>
+              <i class="fa fa-bars" id = "menu-icon"  aria-hidden="true"></i>
               <div class="header_right">
-                  <!--<div class="item"><p>--><%= link_to '検索', books_top_path , class:'item' %><!--</p></div>
-                  <div class="item"><p>--><%= link_to 'マイページ', current_user, class:'item' %><!--s</p></div>-->
-                  <% if user_signed_in? %>
-                  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"item" %>
-                  <% else%>
-                  <%= link_to 'ログイン', new_user_session_path, class:"item" %>
-                  <% end%>
+                <!--<div class="item"><p>--><%= link_to '検索', books_top_path , class:'item item-search' %><!--</p></div>
+                <div class="item"><p>--><%= link_to 'マイページ', current_user, class:'item item-mypage' %><!--s</p></div>-->
+                <% if user_signed_in? %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"item item-logout" %>
+                <% else%>
+                <%= link_to 'ログイン', new_user_session_path, class:"item item-logout" %>
+                <% end%>
               </div>
-          </div>
-      </header>
-      <div class="header-fill">
-          <p class="alert alert-success">
-              <%= notice%>
-          </p>
-          <p class="alert alert-danger">
-              <%= alert%>
-          </p>
-          <%= yield %>
-      </div>
 
-  </body>
-</html>
+              <div class="header-toggleMenu">
+                <!--<div class="item"><p>--><%= link_to '検索', books_top_path , class:'item item-search' %><!--</p></div>
+                <div class="item"><p>--><%= link_to 'マイページ', current_user, class:'item item-mypage' %><!--s</p></div>-->
+                <% if user_signed_in? %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"item item-logout" %>
+                <% else%>
+                <%= link_to 'ログイン', new_user_session_path, class:"item item-logout" %>
+                <% end%>
+              </div>
+            </div>
+          </header>
+
+          <%= yield %>
+
+        </body>
+        </html>

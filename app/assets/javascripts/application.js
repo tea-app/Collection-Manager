@@ -14,3 +14,36 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+jQuery( function($) {
+
+
+  $("#menu-icon").click(function(){
+
+    if ($(this).hasClass('open')) {
+      $(".header-toggleMenu").find(".item-search").hide();
+      $(".header-toggleMenu").find(".item-mypage").hide();
+      $(".header-toggleMenu").find(".item-logout").hide();
+      $(this).removeClass('open');
+    } else {
+      $(".header-toggleMenu").find(".item-search").show();
+      $(".header-toggleMenu").find(".item-mypage").show();
+      $(".header-toggleMenu").find(".item-logout").show();
+      $(this).addClass('open');
+
+    }
+
+  });
+});
+  /*    if ($(this).hasClass('open')) {
+  $(".item-search").hide();
+  $(".item-mypage").hide();
+  $(".item-logout").hide();
+  $(this).removeClass('open');
+} else {
+$(".item-search").css("display", "block");
+$(".item-mypage").css("display", "block");
+$(".item-logout").css("display", "block");
+$(this).addClass('open');
+}
+*/
