@@ -4,6 +4,7 @@
 
 a {
   text-decoration: none;
+  color:#fff;
 }
 
 .user_profile{
@@ -32,7 +33,7 @@ a {
 }
 
 .book_shelf{
-    height: 1000px;
+    height: 500px;
     background-color: #444;   /*仮置き*/
     overflow: scroll;
     padding-right: 20px;
@@ -114,9 +115,28 @@ a {
     font-size:15px;
 }
 
+.books_container {
+    max-width: 1300px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
 /*----edit.html---------------*/
 
 .title {
     font-size: 32px;
     margin-top: 70px;
+}
+
+.user_edit{
+    width:80%;
+}
+
+.user_edit h1{
+    color:#fff;
+}
+
+.user_edit p{
+    color:#fff;
 }
