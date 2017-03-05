@@ -43,7 +43,7 @@ html,body {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  width: 150px;
+  width: 200px;
   background-color: rgb(97, 73, 52);
   color: white;
 }
@@ -55,6 +55,10 @@ html,body {
   border-radius: 10px;
 }
 
+.btn:hover {
+  background-color: rgba(88, 63, 43, 1.0);
+}
+
 .btn:active {
-  background-color: rgba(98, 73, 52, 0.7);
+  background-color: rgba(108, 83, 63, 1.0);
 }
