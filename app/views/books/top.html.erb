@@ -2,24 +2,36 @@
     <div class="top-search-wrapper">
         <h1>詳細検索</h1>
         <div class="search-form">
+            <%= form_tag books_search_result_path do %>
             <div class="title-form">
                 <p class="title-word">タイトル</p>
-                <input type="text" class="title-field">
+                <%= text_field_tag :title, "",class:"title-field" %><!--<input type="text" class="title-field">-->
             </div>
             <div class="genre-form">
                 <p class="genre-word">ジャンル</p>
+                <%= select :content, :id, [["全て", "0"], ["単行本", "1"], ["文庫", "2"], ["新書", "3"], ["全集・双書", "4"], ["事・辞典", "5"],["図鑑", "6"], ["絵本", "7"], ["カセット,CDなど", "8"], ["コミック", "9"], ["ムックその他", "10"]], class:"genre-field"%>
+                <!--
                 <select name="example" class="genre-field">
-                    <option value="サンプル0">選択してください</option>
-                    <option value="サンプル1">小説</option>
-                    <option value="サンプル2">漫画</option>
-                    <option value="サンプル3">その他</option>
-                </select>
+                    <option value="サンプル0">全て</option>
+                    <option value="サンプル1">単行本</option>
+                    <option value="サンプル2">文庫</option>
+                    <option value="サンプル3">新書</option>
+                    <option value="サンプル4">全集・双書</option>
+                    <option value="サンプル5">事・辞典</option>
+                    <option value="サンプル6">図鑑</option>
+                    <option value="サンプル7">絵本</option>
+                    <option value="サンプル8">カセット,CDなど</option>
+                    <option value="サンプル9">コミック</option>
+                    <option value="サンプル10">ムックその他</option>
+                </select>-->
             </div>
             <div class="ibsn-form">
                 <p class="ibsn-word">IBSNコード（任意）</p>
-                <input type="text" class="ibsn-field">
+                <%= text_field_tag :isbn, "", class:"ibsn-field"%><!--<input type="text" class="ibsn-field">-->
             </div>
-            <input type="submit" class="btn search-btn" value="検索">
+            <%= submit_tag "検索", class:"btn search-btn"%>
+            <!--<input type="submit" class="btn search-btn" value="検索">-->
+            <% end %>
         </div>
     </div>
     <div class="top-list-wrapper">
