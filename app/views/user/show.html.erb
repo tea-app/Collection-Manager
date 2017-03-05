@@ -12,9 +12,7 @@
                     <%= image_for(@user) %> <!--user photo-->
                 </div>
                 <div class="btn-wrapper">
-                    <div class="profile_update">
-                        <%= link_to 'プロフィールを編集する', edit_user_path(@user) %>
-                    </div>
+                    <%= link_to 'プロフィールを編集する', edit_user_path(@user), class:"profile_update" %>
                 </div>
             </div>
         </div>
