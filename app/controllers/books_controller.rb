@@ -7,6 +7,8 @@ class BooksController < ApplicationController
       @imageUrl = params[:imageUrl]
       @author = params[:author]
       @isbn = params[:isbn]
+      @publisherName = params[:publisherName]
+      @salesDate = params[:salesDate]
       @library1 = Library.find_by(isbn:params[:isbn], mode:0, user_id:current_user.id)
       @library2 = Library.find_by(isbn:params[:isbn], mode:1, user_id:current_user.id)
       if @library1.nil?
@@ -100,6 +102,8 @@ class BooksController < ApplicationController
                   author: items.dig(i, "Item", "author"),
                   size: items.dig(i, "Item", "size"),
                   isbn: items.dig(i, "Item", "isbn"),
+                  publisherName: items.dig(i, "Item", "publisherName"),
+                  salesDate: items.dig(i, "Item", "salesDate"),
                   itemUrl: items.dig(i, "Item", "itemUrl"),
                   imageUrl: items.dig(i, "Item", "largeImageUrl"),
               }
