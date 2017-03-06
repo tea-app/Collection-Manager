@@ -49,63 +49,39 @@ class BooksController < ApplicationController
     end
     redirect_to current_user
   end
+
   def search_result
-    @title = params[:title]
-    @imageUrl = params[:imageUrl]
-    @author = params[:author]
-    @isbn = params[:isbn]
-    @library = Library.find_by(isbn:params[:isbn], user_id:current_user.id)
-    if @library.nil?
-      @word = "books_btn have-btn1"
-    else
-      @word = "books_btn have-btn2"
-    end
-    #api(@isbn)
-  end
-  def db_have
-    @judge= Library.find_by(isbn:params[:isbn], user_id:current_user.id)
-    if @judge.nil?
-      @library = Library.new
-      @library.isbn = params[:format]
-      @library.mode = 0
-      @library.user_id = current_user.id
-      @library.save
-    else
-      @judge.destroy
-    end
-    redirect_to current_user
-  end
-  def db_read
-  end
-  def search_result
-    @title = params[:title]
-    @size = params[:content][:id]
-    @isbn = params[:isbn]
+    @input_title = params[:title]
+    @input_size = params[:content][:id]
+    @input_isbn = params[:isbn]
     @error = ""
     uri = 'https://app.rakuten.co.jp/services/api/BooksBook/Search/20130522?applicationId=1097463767217933326'
 
     #htmlからパラメータを受け取り代入する
-    if @title.length < 2 && @isbn == ""
+    if @input_title.length < 2 && @input_isbn == ""
       @error = "error　２文字以上で入力してください"
       return false
     end
     parameter = {
-      title: @title,
+      title: @input_title,
       author: '',
-      size: @size, #書籍の種類についてのパラメータ
-      isbn: @isbn, #isbnコードのパラメータ
+      size: @input_size, #書籍の種類についてのパラメータ
+      isbn: @input_isbn, #isbnコードのパラメータ
     }
+
+    #render :text => parameter #デバッグ用
+    #return false
 
     def make_url uri, parameter
       url = uri
 
-      if @isbn != ""
-        url += "&isbn=#{@isbn}"
+      if @input_isbn != ""
+        url += "&isbn=#{@input_isbn}"
         return url
       else
         parameter.each do |key, value|
           tmp = CGI.escape(value)
-          url += "&#{key}=#{tmp}" unless value == '' || key = "isbn"#それぞれのvalueが空でない時request_urlの後ろに追加する。
+          url += "&#{key}=#{tmp}" unless value == '' && key = "isbn"#valueが空でなくて
         end
       end
       url
