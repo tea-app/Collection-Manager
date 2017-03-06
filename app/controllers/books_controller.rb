@@ -105,6 +105,9 @@ class BooksController < ApplicationController
     if json == 'error'
       @error = "データの取得に失敗しました"
       return false
+    elsif json["hits"] == 0
+      @error = "データが存在しませんでした"
+
     else
       items = json["Items"]
       # resultを使ってなんやかんや処理をする
