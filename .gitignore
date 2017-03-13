@@ -13,7 +13,6 @@ vendor/bundle
 /tmp
 
 # Ignore all db/migrate/*
-/db/migrate
 
 # Ignore all userimage file
 /public/user_images
